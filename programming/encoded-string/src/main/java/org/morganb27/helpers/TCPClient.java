@@ -32,8 +32,7 @@ public class TCPClient {
 
     public void sendMessage(String message) {
         if (writer != null) {
-            float floatMessage = Float.parseFloat(message);
-            writer.println(floatMessage);
+            writer.println(message);
             logger.info("Sent message: " + message);
         } else {
             logger.warning("Cannot send message. Writer is not initialized.");
